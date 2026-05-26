@@ -1,3 +1,19 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: linear-gradient(
+    135deg,
+    #061826 0%,
+    #0b2239 40%,
+    #12395b 100%
+  );
+
+  color: #eaf6ff;
+  overflow-x: hidden;
+}

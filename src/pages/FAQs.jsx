@@ -65,19 +65,20 @@ function FAQs() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white">
-      {/* Full Width Banner Section */}
+    <div className="min-h-screen bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] text-slate-900">
+      
+      {/* Banner Section */}
       <div className="relative h-[200px] md:h-[350px] overflow-hidden group shadow-2xl">
         <img
           src={pageBg}
           alt="FAQs Header"
           className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/20 to-[#020617]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#cfefff]/20 to-[#cfefff]"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4">
             <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full" />
-            <h2 className="text-white/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
+            <h2 className="text-slate-900/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
               FAQs
             </h2>
           </div>
@@ -86,88 +87,99 @@ function FAQs() {
 
       <div className="px-6 py-20 lg:px-16">
         <div className="max-w-6xl mx-auto space-y-16">
-        <header className="space-y-6 text-center">
-          <p className="text-cyan-300 uppercase tracking-[0.35em] text-sm font-semibold">
-            Frequently Asked Questions
-          </p>
-          <h1 className="text-4xl font-extrabold sm:text-5xl">
-            Common Scientific Inquiries
-          </h1>
-          <p className="mx-auto max-w-3xl text-slate-400 leading-8 text-lg">
-            Find answers to common questions about our pharmaceutical
-            solid-state research services and how we can support your
-            development programs.
-          </p>
-        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`group rounded-2xl border transition-all duration-300 ${
-                activeIndex === index
-                  ? "border-cyan-400/50 bg-[#0A1628]/95 shadow-cyan-500/10"
-                  : "border-cyan-400/10 bg-[#07101F]/90 shadow-2xl hover:border-cyan-400/30 hover:bg-[#0A1628]/95"
-              } p-5`}
-            >
-              <button
-                onClick={() => toggleAccordion(index)}
-                className="w-full flex items-center justify-between text-left gap-4"
+          {/* Header */}
+          <header className="space-y-6 text-center">
+            <p className="text-cyan-700 uppercase tracking-[0.35em] text-sm font-semibold">
+              Frequently Asked Questions
+            </p>
+            <h1 className="text-4xl font-extrabold sm:text-5xl text-slate-900">
+              Common Scientific Inquiries
+            </h1>
+            <p className="mx-auto max-w-3xl text-slate-700 leading-8 text-lg">
+              Find answers to common questions about our pharmaceutical
+              solid-state research services and how we can support your
+              development programs.
+            </p>
+          </header>
+
+          {/* FAQ Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className={`group rounded-2xl border transition-all duration-300 ${
+                  activeIndex === index
+                    ? "border-cyan-400 bg-white/70 shadow-lg"
+                    : "border-sky-100 bg-white/60 hover:border-cyan-300"
+                } p-5 backdrop-blur-md`}
               >
-                <h3 className="text-lg font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors">
-                  {faq.question}
-                </h3>
-                <ChevronDown
-                  className={`w-6 h-6 text-cyan-400 transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="w-full flex items-center justify-between text-left gap-4"
+                >
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {faq.question}
+                  </h3>
 
-              <AnimatePresence>
-                {activeIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0, marginTop: 0 }}
-                    animate={{ height: "auto", opacity: 1, marginTop: 16 }}
-                    exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                  >
-                    <p className="text-slate-300 leading-7">{faq.answer}</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </div>
+                  <ChevronDown
+                    className={`w-6 h-6 text-cyan-600 transition-transform duration-300 ${
+                      activeIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-        <section className="rounded-[2rem] border border-cyan-400/10 bg-[#07101F]/90 p-10 shadow-2xl text-center">
-          <h2 className="text-3xl font-semibold text-cyan-300 mb-6">
-            Still Have Questions?
-          </h2>
-          <p className="text-slate-300 leading-8 mb-8 max-w-2xl mx-auto">
-            Our scientific team is ready to discuss your specific project
-            requirements and provide detailed answers to your questions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center rounded-2xl bg-cyan-400 px-8 py-4 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 hover:scale-105"
-            >
-              Contact Our Team
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center rounded-2xl border border-cyan-400/30 bg-white/5 px-8 py-4 text-sm font-semibold text-white transition hover:bg-cyan-500/10 hover:scale-105"
-            >
-              Schedule a Discussion
-            </Link>
+                <AnimatePresence>
+                  {activeIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                      animate={{ height: "auto", opacity: 1, marginTop: 16 }}
+                      exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <p className="text-slate-700 leading-7">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
           </div>
-        </section>
+
+          {/* CTA Section */}
+          <section className="rounded-[2rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 shadow-lg text-center">
+            <h2 className="text-3xl font-semibold text-cyan-800 mb-6">
+              Still Have Questions?
+            </h2>
+
+            <p className="text-slate-700 leading-8 mb-8 max-w-2xl mx-auto">
+              Our scientific team is ready to discuss your specific project
+              requirements and provide detailed answers to your questions.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-2xl bg-cyan-500 px-8 py-4 text-sm font-semibold text-white hover:bg-cyan-600 transition hover:scale-105"
+              >
+                Contact Our Team
+              </Link>
+
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-2xl border border-sky-200 bg-white/70 px-8 py-4 text-sm font-semibold text-slate-900 hover:border-cyan-300 hover:scale-105 transition"
+              >
+                Schedule a Discussion
+              </Link>
+            </div>
+          </section>
+
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default FAQs;

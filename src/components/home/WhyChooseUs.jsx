@@ -30,35 +30,47 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="relative z-10 px-6 py-24 bg-slate-900/40 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative z-10 px-6 py-24 overflow-hidden bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff]">
+      
+      {/* Decorative Glow (same as Industries section) */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-300/20 blur-[150px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative">
+
+        {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-black">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900">
             Why Partner With Us?
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-700 text-lg max-w-2xl mx-auto">
             Delivering world-class solid-state research services with a focus on
             quality, reliability, and scientific innovation.
           </p>
         </div>
 
+        {/* Feature Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {features.map((feature, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="p-5 md:p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all group text-center"
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="p-5 md:p-8 rounded-3xl bg-white/60 border border-sky-100 backdrop-blur-md hover:border-cyan-400/40 transition-all group text-center shadow-md"
             >
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-4 md:mb-6 mx-auto group-hover:scale-110 transition-transform">
+              {/* Icon */}
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-cyan-100 flex items-center justify-center text-cyan-700 mb-4 md:mb-6 mx-auto group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">
+
+              {/* Title */}
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-slate-900 group-hover:text-cyan-700 transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
+
+              {/* Description */}
+              <p className="text-slate-700 text-xs md:text-sm leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

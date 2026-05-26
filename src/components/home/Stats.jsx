@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import StatCounter from "./StatCounter";
 
 const Stats = () => (
-  <section className="relative z-10 px-6 py-4 bg-slate-950/50 backdrop-blur-md border-y border-white/5">
+  <section className="relative z-10 px-6 py-4 bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] border-y border-sky-200/40">
     <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
       {[
         {
@@ -37,7 +37,11 @@ const Stats = () => (
           <h2 className="text-6xl font-black text-cyan-400">
             <StatCounter targetValue={stat.value} />
           </h2>
-          <p className="text-xl font-bold text-white">{stat.label}</p>
+
+          <p className="text-xl font-bold text-black">
+            {stat.label}
+          </p>
+
           <p className="text-slate-500 font-medium uppercase tracking-widest text-xs">
             {stat.sub}
           </p>

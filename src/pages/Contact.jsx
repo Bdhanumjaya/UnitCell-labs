@@ -9,7 +9,8 @@ import pageBg from "../assets/page-bg.png";
 
 function Contact() {
   return (
-    <div className="bg-[#020617] text-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] text-slate-900">
+      
       {/* Full Width Banner Section */}
       <div className="relative h-[200px] md:h-[350px] overflow-hidden group shadow-2xl">
         <img
@@ -17,11 +18,11 @@ function Contact() {
           alt="Contact Header"
           className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/20 to-[#020617]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#cfefff]/20 to-[#cfefff]"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center space-y-4">
             <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full" />
-            <h2 className="text-white/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
+            <h2 className="text-slate-900/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
               Contact
             </h2>
           </div>
@@ -30,14 +31,15 @@ function Contact() {
 
       <div className="px-6 py-20 lg:px-16">
         <div className="max-w-6xl mx-auto space-y-16">
+
           <header className="space-y-6 text-center">
-            <p className="text-cyan-300 uppercase tracking-[0.35em] text-sm font-semibold">
+            <p className="text-cyan-700 uppercase tracking-[0.35em] text-sm font-semibold">
               Contact Us
             </p>
-            <h1 className="text-4xl font-extrabold sm:text-5xl">
+            <h1 className="text-4xl font-extrabold sm:text-5xl text-slate-900">
               Let’s Discuss Your Project
             </h1>
-            <p className="mx-auto max-w-3xl text-slate-400 leading-8 text-lg">
+            <p className="mx-auto max-w-3xl text-slate-700 leading-8 text-lg">
               Whether you are working on pharmaceutical, chemical, material
               science, or research-based projects, our team is ready to support
               your solid-state development requirements.
@@ -45,133 +47,125 @@ function Contact() {
           </header>
 
           <div className="grid gap-8 lg:grid-cols-[0.95fr_0.75fr]">
-            <div className="space-y-6 rounded-2xl border border-cyan-400/10 bg-[#07101F]/90 p-6 shadow-2xl">
+            
+            {/* Left Card */}
+            <div className="space-y-6 rounded-2xl border border-sky-100 bg-white/60 backdrop-blur-md p-6 shadow-lg">
+
               <div className="grid gap-5">
-                <div className="flex items-center gap-5 rounded-3xl border border-cyan-400/10 bg-[#0B1324]/90 p-5">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-400/10 text-cyan-300">
+
+                <div className="flex items-center gap-5 rounded-3xl border border-sky-100 bg-white/70 p-5">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-100 text-cyan-700">
                     <Mail size={24} />
                   </div>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">
+                    <p className="text-sm uppercase tracking-[0.24em] text-cyan-700">
                       Email
                     </p>
-                    <p className="mt-2 text-slate-300">
+                    <p className="mt-2 text-slate-700">
                       contact@unitcelllabs.com
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-5 rounded-3xl border border-cyan-400/10 bg-[#0B1324]/90 p-5">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-400/10 text-cyan-300">
+
+                <div className="flex items-center gap-5 rounded-3xl border border-sky-100 bg-white/70 p-5">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-100 text-cyan-700">
                     <Phone size={24} />
                   </div>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">
+                    <p className="text-sm uppercase tracking-[0.24em] text-cyan-700">
                       Phone
                     </p>
-                    <p className="mt-2 text-slate-300">+91 8977770084</p>
+                    <p className="mt-2 text-slate-700">+91 8977770084</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-5 rounded-3xl border border-cyan-400/10 bg-[#0B1324]/90 p-5">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-400/10 text-cyan-300">
+
+                <div className="flex items-center gap-5 rounded-3xl border border-sky-100 bg-white/70 p-5">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-100 text-cyan-700">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">
+                    <p className="text-sm uppercase tracking-[0.24em] text-cyan-700">
                       Location
                     </p>
-                    <p className="mt-2 text-slate-300">
+                    <p className="mt-2 text-slate-700">
                       Indian Institute of Technology Hyderabad, Kandi, Sangareddy,
                       Telangana-502885, India
                     </p>
                   </div>
                 </div>
+
               </div>
 
-              <div className="pt-6 border-t border-cyan-400/10">
-                <p className="text-sm uppercase tracking-[0.24em] text-cyan-300 mb-6">
+              {/* Social */}
+              <div className="pt-6 border-t border-sky-100">
+                <p className="text-sm uppercase tracking-[0.24em] text-cyan-700 mb-6">
                   Connect With Us
                 </p>
+
                 <div className="flex gap-4">
-                  <a
-                    href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950"
-                  >
-                    <FaLinkedin size={20} />
-                  </a>
-                  <a
-                    href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950"
-                  >
-                    <FaTwitter size={20} />
-                  </a>
-                  <a
-                    href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950"
-                  >
-                    <FaFacebookF size={20} />
-                  </a>
-                  <a
-                    href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 transition-all duration-300 hover:bg-cyan-400 hover:text-slate-950"
-                  >
-                    <FaInstagram size={20} />
-                  </a>
+                  {[FaLinkedin, FaTwitter, FaFacebookF, FaInstagram].map((Icon, i) => (
+                    <a
+                      key={i}
+                      href="#"
+                      className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-100 text-cyan-700 transition-all hover:bg-cyan-500 hover:text-white"
+                    >
+                      <Icon size={20} />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-cyan-400/10 bg-[#07101F]/90 p-6 shadow-2xl">
-              <h2 className="text-3xl font-semibold text-cyan-300 mb-5">
+            {/* Right Form */}
+            <div className="rounded-2xl border border-sky-100 bg-white/60 backdrop-blur-md p-6 shadow-lg">
+              <h2 className="text-3xl font-semibold text-cyan-800 mb-5">
                 Send a Request
               </h2>
+
               <form className="space-y-6">
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-300">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    className="w-full rounded-2xl border border-cyan-400/20 bg-[#020617] px-5 py-3 text-slate-100 outline-none transition focus:border-cyan-300"
-                  />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-300">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your company name"
-                    className="w-full rounded-2xl border border-cyan-400/20 bg-[#020617] px-5 py-3 text-slate-100 outline-none transition focus:border-cyan-300"
-                  />
-                </div>
+
+                {["Name", "Company Name"].map((label) => (
+                  <div key={label}>
+                    <label className="mb-2 block text-sm font-medium text-slate-700">
+                      {label}
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full rounded-2xl border border-sky-100 bg-white px-5 py-3 text-slate-900 outline-none focus:border-cyan-400"
+                      placeholder={`Enter your ${label.toLowerCase()}`}
+                    />
+                  </div>
+                ))}
+
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-300">
+                    <label className="mb-2 block text-sm font-medium text-slate-700">
                       Email Address
                     </label>
                     <input
                       type="email"
+                      className="w-full rounded-2xl border border-sky-100 bg-white px-5 py-3 text-slate-900 outline-none focus:border-cyan-400"
                       placeholder="Enter your email"
-                      className="w-full rounded-2xl border border-cyan-400/20 bg-[#020617] px-5 py-3 text-slate-100 outline-none transition focus:border-cyan-300"
                     />
                   </div>
+
                   <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-300">
+                    <label className="mb-2 block text-sm font-medium text-slate-700">
                       Phone Number
                     </label>
                     <input
                       type="tel"
+                      className="w-full rounded-2xl border border-sky-100 bg-white px-5 py-3 text-slate-900 outline-none focus:border-cyan-400"
                       placeholder="Enter your phone"
-                      className="w-full rounded-2xl border border-cyan-400/20 bg-[#020617] px-5 py-3 text-slate-100 outline-none transition focus:border-cyan-300"
                     />
                   </div>
                 </div>
+
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-300">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Service Requirement
                   </label>
-                  <select className="w-full rounded-2xl border border-cyan-400/20 bg-[#020617] px-5 py-3 text-slate-100 outline-none transition focus:border-cyan-300">
+                  <select className="w-full rounded-2xl border border-sky-100 bg-white px-5 py-3 text-slate-900 outline-none focus:border-cyan-400">
                     <option value="">Select a service requirement</option>
                     <option>Polymorph Screening</option>
                     <option>Salt Screening</option>
@@ -181,26 +175,30 @@ function Contact() {
                     <option>Preformulation Studies</option>
                   </select>
                 </div>
+
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-300">
+                  <label className="mb-2 block text-sm font-medium text-slate-700">
                     Message
                   </label>
                   <textarea
                     rows="5"
+                    className="w-full rounded-2xl border border-sky-100 bg-white px-5 py-3 text-slate-900 outline-none focus:border-cyan-400"
                     placeholder="Describe your project or inquiry"
-                    className="w-full rounded-2xl border border-cyan-400/20 bg-[#020617] px-5 py-3 text-slate-100 outline-none transition focus:border-cyan-300"
                   />
                 </div>
-                <button className="inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300">
+
+                <button className="inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-white hover:bg-cyan-600 transition">
                   Send Request
                   <Send size={20} />
                 </button>
+
               </form>
             </div>
           </div>
         </div>
 
-        <div className="mt-20 max-w-7xl mx-auto overflow-hidden rounded-[2rem] border border-cyan-400/10 shadow-2xl">
+        {/* Map */}
+        <div className="mt-20 max-w-7xl mx-auto overflow-hidden rounded-[2rem] border border-sky-100 shadow-lg">
           <iframe
             title="Unit Cell Labs Location"
             src="https://www.google.com/maps?q=Indian+Institute+of+Technology+Hyderabad&output=embed"
@@ -213,6 +211,7 @@ function Contact() {
             className="w-full"
           ></iframe>
         </div>
+
       </div>
     </div>
   );

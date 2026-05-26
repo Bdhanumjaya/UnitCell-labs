@@ -72,23 +72,28 @@ function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#030712] text-white font-sans selection:bg-cyan-500/30">
-      {/* Background Layer */}
+    <div className="relative min-h-screen bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] text-slate-900 font-sans selection:bg-cyan-400/30">
+      
+      {/* Particle Background Layer (kept as-is) */}
       <div
         id="particles-js"
-        className="fixed inset-0 z-0 pointer-events-none opacity-100"
+        className="fixed inset-0 z-0 pointer-events-none opacity-80"
       ></div>
 
-      <Hero />
-      <Stats />
-      <VisionMission />
-      <Facilities />
-      <Industries />
-      <Importance />
-      <Services />
-      <WhyChooseUs />
-      <Methodology />
-      <FinalCTA />
+      {/* Content */}
+      <div className="relative z-10">
+        <Hero />
+        <Stats />
+        <VisionMission />
+        <Facilities />
+        <Industries />
+        <Importance />
+        <Services />
+        <WhyChooseUs />
+        <Methodology />
+        <FinalCTA />
+      </div>
+
     </div>
   );
 }

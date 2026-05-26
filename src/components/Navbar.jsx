@@ -46,7 +46,7 @@ function Navbar() {
 
   return (
     <header
-      className={`bg-[#08121F]/95 backdrop-blur-md border-b border-cyan-500/15 fixed top-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-[#0e7490]/70 backdrop-blur-md border-b border-cyan-500/15 fixed top-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
