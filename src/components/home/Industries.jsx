@@ -29,10 +29,10 @@ const Industries = () => {
   ];
 
   return (
-    <section className="relative z-10 px-6 py-24 overflow-hidden bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff]">
+    <section className="relative z-10 px-6 py-24 overflow-hidden bg-white font-sans">
       
       {/* Decorative Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-300/20 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#005dad]/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
         
@@ -42,14 +42,14 @@ const Industries = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="px-4 py-1 rounded-full bg-cyan-100 border border-cyan-300 text-cyan-700 text-sm font-semibold tracking-wider uppercase"
+            className="px-4 py-1 bg-blue-50 border border-blue-200 text-[#005dad] text-sm font-semibold tracking-wider uppercase"
           >
             Sectors We Impact
           </motion.div>
 
           <h2 className="text-4xl md:text-6xl font-black leading-tight text-slate-900">
             Industries We{" "}
-            <span className="text-cyan-700 italic">Serve</span>
+            <span className="text-[#005dad] italic">Serve</span>
           </h2>
 
           <p className="text-xl text-slate-700 leading-relaxed">
@@ -66,7 +66,7 @@ const Industries = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative h-[500px] rounded-[2.5rem] overflow-hidden border border-sky-200 hover:border-cyan-400/40 transition-all duration-500 shadow-xl"
+              className="group relative h-[350px] overflow-hidden border border-sky-200 hover:border-[#005dad]/30 transition-all duration-500"
             >
               
               {/* Background Image */}
@@ -76,28 +76,25 @@ const Industries = () => {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#cfefff] via-[#dff4ff]/50 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+
 
               {/* Content */}
-              <div className="absolute inset-0 p-10 flex flex-col justify-end space-y-4">
+              {/* Dark bottom gradient for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+              <div className="absolute inset-0 p-10 flex flex-col justify-end space-y-2">
                 
-                <div className="text-cyan-700 font-bold text-sm tracking-widest uppercase">
+                <div className="transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white/70 font-bold text-sm tracking-widest uppercase">
                   {industry.stats}
                 </div>
 
-                <h3 className="text-3xl font-bold text-slate-900 group-hover:text-cyan-700 transition-colors">
+                <h3 className="transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75 text-3xl font-bold text-white">
                   {industry.title}
                 </h3>
 
-                <p className="text-slate-700 text-sm leading-relaxed transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <p className="text-white/80 text-sm leading-relaxed transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-150">
                   {industry.description}
                 </p>
-
-                <div className="pt-4 flex items-center gap-2 text-slate-900 font-semibold text-sm group-hover:gap-4 transition-all">
-                  View Expertise{" "}
-                  <span className="text-cyan-700">→</span>
-                </div>
 
               </div>
             </motion.div>

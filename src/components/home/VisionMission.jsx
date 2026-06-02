@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const VisionMission = () => {
   return (
-    <section className="relative z-10 px-6 py-24 bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff]">
+    <section className="relative z-10 px-6 py-24 bg-white font-sans">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
 
@@ -13,14 +13,14 @@ const VisionMission = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="group relative p-10 rounded-[2.5rem] bg-white/60 border border-sky-200 hover:border-sky-400 transition-all overflow-hidden flex flex-col justify-between backdrop-blur-md"
+            className="group relative p-10 bg-white/60 border border-sky-200 hover:border-[#005dad]/30 transition-all overflow-hidden flex flex-col justify-between backdrop-blur-md"
           >
             {/* Background Gradient Glow */}
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-sky-300/20 rounded-full blur-[80px] group-hover:bg-sky-300/30 transition-colors" />
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#005dad]/5 rounded-full blur-[80px] group-hover:bg-[#005dad]/10 transition-colors" />
 
             <div>
               <div className="flex items-center gap-6 mb-8">
-                <div className="w-16 h-16 shrink-0 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-700 group-hover:rotate-12 transition-transform duration-500">
+                <div className="w-16 h-16 shrink-0 bg-blue-50 flex items-center justify-center text-[#005dad] group-hover:rotate-12 transition-transform duration-500">
                   <Target className="w-8 h-8" />
                 </div>
 
@@ -36,8 +36,8 @@ const VisionMission = () => {
               </p>
             </div>
 
-            <div className="flex items-center gap-4 text-sky-700 font-semibold tracking-wide uppercase text-sm text-cyan-700">
-              <span className="h-[2px] w-12 bg-sky-400"></span>
+            <div className="flex items-center gap-4 text-[#005dad] font-semibold tracking-wide uppercase text-sm">
+              <span className="h-[2px] w-12 bg-[#005dad]"></span>
               Driving Innovation
             </div>
           </motion.div>
@@ -48,14 +48,14 @@ const VisionMission = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="group relative p-10 rounded-[2.5rem] bg-white/60 border border-sky-200 hover:border-sky-400 transition-all overflow-hidden flex flex-col justify-between backdrop-blur-md"
+            className="group relative p-10 bg-white/60 border border-sky-200 hover:border-[#005dad]/30 transition-all overflow-hidden flex flex-col justify-between backdrop-blur-md"
           >
             {/* Background Gradient Glow */}
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-cyan-300/20 rounded-full blur-[80px] group-hover:bg-cyan-300/30 transition-colors" />
+            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#005dad]/5 rounded-full blur-[80px] group-hover:bg-[#005dad]/10 transition-colors" />
 
             <div>
               <div className="flex items-center gap-6 mb-8">
-                <div className="w-16 h-16 shrink-0 rounded-2xl bg-cyan-100 flex items-center justify-center text-cyan-700 group-hover:-rotate-12 transition-transform duration-500">
+                <div className="w-16 h-16 shrink-0 bg-blue-50 flex items-center justify-center text-[#005dad] group-hover:-rotate-12 transition-transform duration-500">
                   <Compass className="w-8 h-8" />
                 </div>
 
@@ -71,8 +71,8 @@ const VisionMission = () => {
               </p>
             </div>
 
-            <div className="flex items-center gap-4 text-cyan-700 font-semibold tracking-wide uppercase text-sm">
-              <span className="h-[2px] w-12 bg-cyan-400"></span>
+            <div className="flex items-center gap-4 text-[#005dad] font-semibold tracking-wide uppercase text-sm">
+              <span className="h-[2px] w-12 bg-[#005dad]"></span>
               Shaping the Future
             </div>
           </motion.div>

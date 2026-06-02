@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Microscope,
   Atom,
@@ -8,6 +9,7 @@ import {
   Factory,
 } from "lucide-react";
 import pageBg from "../assets/page-bg.png";
+import PageBanner from "../components/PageBanner";
 
 function Expertise() {
   const expertiseAreas = [
@@ -107,32 +109,17 @@ function Expertise() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] text-slate-900">
+    <div className="min-h-screen bg-white text-slate-900">
       
       {/* Banner Section */}
-      <div className="relative h-[200px] md:h-[350px] overflow-hidden group shadow-2xl">
-        <img
-          src={pageBg}
-          alt="Expertise Header"
-          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#cfefff]/20 to-[#cfefff]"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center space-y-4">
-            <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full" />
-            <h2 className="text-slate-900/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
-              Expertise
-            </h2>
-          </div>
-        </div>
-      </div>
+      <PageBanner title="Expertise" alt="Expertise Header" />
 
       <div className="px-6 py-20 lg:px-16">
         <div className="max-w-7xl mx-auto space-y-16">
 
           {/* Header */}
           <header className="space-y-6 text-center">
-            <p className="text-cyan-700 uppercase tracking-[0.35em] text-sm font-semibold">
+            <p className="text-[#005dad] uppercase tracking-[0.35em] text-sm font-semibold">
               Scientific Expertise
             </p>
             <h1 className="text-4xl font-extrabold sm:text-4xl text-slate-900">
@@ -150,10 +137,10 @@ function Expertise() {
             {expertiseAreas.map((area) => (
               <div
                 key={area.title}
-                className="group rounded-2xl border border-sky-100 bg-white/60 backdrop-blur-md p-5 shadow-lg transition-all duration-300 hover:border-cyan-300 hover:scale-105"
+                className="group border border-sky-100 bg-white/60 backdrop-blur-md p-5 shadow-lg transition-all duration-300 hover:border-[#005dad]/30 hover:scale-105"
               >
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="p-3 rounded-2xl bg-cyan-100 text-cyan-700">
+                  <div className="p-3 bg-blue-50 text-[#005dad]">
                     <area.icon size={28} />
                   </div>
                   <h3 className="text-xl font-semibold text-slate-900">
@@ -169,7 +156,7 @@ function Expertise() {
                   {area.details.map((detail) => (
                     <div
                       key={detail}
-                      className="rounded-2xl border border-sky-100 bg-white/70 px-4 py-2 text-sm text-slate-600 hover:border-cyan-300 transition-all"
+                      className="border border-sky-100 bg-white/70 px-4 py-2 text-sm text-slate-600 hover:border-[#005dad]/30 transition-all"
                     >
                       {detail}
                     </div>
@@ -180,9 +167,9 @@ function Expertise() {
           </div>
 
           {/* Capabilities */}
-          <section className="rounded-[2rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 shadow-lg">
+          <section className="border border-sky-100 bg-white/60 backdrop-blur-md p-10 shadow-lg">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-semibold text-cyan-800 mb-4">
+              <h2 className="text-3xl font-semibold text-[#005dad] mb-4">
                 Our Scientific Capabilities
               </h2>
               <p className="text-slate-700 leading-8 max-w-3xl mx-auto">
@@ -195,7 +182,7 @@ function Expertise() {
               {capabilities.map((capability) => (
                 <div
                   key={capability}
-                  className="group rounded-3xl border border-sky-100 bg-white/70 p-6 text-center hover:border-cyan-300 hover:scale-105 transition-all shadow-sm"
+                  className="group border border-sky-100 bg-white/70 p-6 text-center hover:border-[#005dad]/30 hover:scale-105 transition-all shadow-sm"
                 >
                   <p className="text-slate-700 font-medium">
                     {capability}
@@ -206,8 +193,8 @@ function Expertise() {
           </section>
 
           {/* Bottom Section */}
-          <section className="rounded-[2rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 text-center shadow-lg">
-            <h2 className="text-3xl font-semibold text-cyan-800 mb-6">
+          <section className="border border-sky-100 bg-white/60 backdrop-blur-md p-10 text-center shadow-lg">
+            <h2 className="text-3xl font-semibold text-[#005dad] mb-6">
               Scientific Solutions for Pharmaceutical Solid Forms
             </h2>
 
@@ -234,7 +221,7 @@ function Expertise() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-3xl border border-sky-100 bg-white/70 p-6 hover:border-cyan-300 transition-all shadow-sm"
+                  className="border border-sky-100 bg-white/70 p-6 hover:border-[#005dad]/30 transition-all shadow-sm"
                 >
                   <h3 className="text-xl font-semibold text-slate-900 mb-2">
                     {item.title}

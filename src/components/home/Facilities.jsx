@@ -23,11 +23,11 @@ const Facilities = () => {
   ];
 
   return (
-    <section className="relative z-10 px-6 py-16 overflow-hidden bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff]">
+    <section className="relative z-10 px-6 py-16 overflow-hidden bg-white font-sans">
       
       {/* Background Glow */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-sky-300/20 blur-[120px] rounded-full" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-200/30 blur-[120px] rounded-full" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#005dad]/5 blur-[120px] rounded-full" />
 
       <div className="max-w-7xl mx-auto space-y-20">
         <div className="text-center space-y-4">
@@ -37,7 +37,7 @@ const Facilities = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-black text-black"
           >
-            Our <span className="text-cyan-700">Capabilities</span> &
+            Our <span className="text-[#005dad]">Capabilities</span> &
             Facilities
           </motion.h2>
 
@@ -68,7 +68,7 @@ const Facilities = () => {
               transition={{ duration: 0.8 }}
               className="flex-1 space-y-6"
             >
-              <div className="inline-block px-4 py-1 rounded-full bg-cyan-100 border border-cyan-300 text-cyan-700 text-sm font-semibold tracking-wider uppercase">
+              <div className="inline-block px-4 py-1 bg-blue-50 border border-blue-200 text-[#005dad] text-sm font-semibold tracking-wider uppercase">
                 {section.tag}
               </div>
 
@@ -80,8 +80,8 @@ const Facilities = () => {
                 {section.content}
               </p>
 
-              <div className="flex items-center gap-4 text-cyan-700 font-medium cursor-pointer group">
-                <span className="h-[1px] w-8 bg-cyan-700 transition-all group-hover:w-12"></span>
+              <div className="flex items-center gap-4 text-[#005dad] font-medium cursor-pointer group">
+                <span className="h-[1px] w-8 bg-[#005dad] transition-all group-hover:w-12"></span>
                 Learn More about our technology
               </div>
             </motion.div>
@@ -94,16 +94,16 @@ const Facilities = () => {
               transition={{ duration: 0.8 }}
               className="flex-1 relative group"
             >
-              <div className="absolute inset-0 bg-cyan-200/40 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-blue-200/10 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-              <div className="relative rounded-[2.5rem] overflow-hidden border border-cyan-200 shadow-2xl">
+              <div className="relative overflow-hidden border border-[#005dad]/20 shadow-2xl">
                 <img
                   src={section.image}
                   alt={section.title}
                   className="w-full h-[350px] object-cover transform transition-transform duration-700 group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-cyan-50 via-transparent to-transparent opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-50 via-transparent to-transparent opacity-40"></div>
               </div>
             </motion.div>
           </div>

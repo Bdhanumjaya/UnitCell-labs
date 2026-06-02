@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import pageBg from "../assets/page-bg.png";
+import PageBanner from "../components/PageBanner";
 
 function FAQs() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -65,32 +66,17 @@ function FAQs() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] text-slate-900">
+    <div className="min-h-screen bg-white text-slate-900">
       
       {/* Banner Section */}
-      <div className="relative h-[200px] md:h-[350px] overflow-hidden group shadow-2xl">
-        <img
-          src={pageBg}
-          alt="FAQs Header"
-          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#cfefff]/20 to-[#cfefff]"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center space-y-4">
-            <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full" />
-            <h2 className="text-slate-900/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
-              FAQs
-            </h2>
-          </div>
-        </div>
-      </div>
+      <PageBanner title="FAQs" alt="FAQs Header" />
 
       <div className="px-6 py-20 lg:px-16">
         <div className="max-w-6xl mx-auto space-y-16">
 
           {/* Header */}
           <header className="space-y-6 text-center">
-            <p className="text-cyan-700 uppercase tracking-[0.35em] text-sm font-semibold">
+            <p className="text-[#005dad] uppercase tracking-[0.35em] text-sm font-semibold">
               Frequently Asked Questions
             </p>
             <h1 className="text-4xl font-extrabold sm:text-5xl text-slate-900">
@@ -108,10 +94,10 @@ function FAQs() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`group rounded-2xl border transition-all duration-300 ${
+                className={`group border transition-all duration-300 ${
                   activeIndex === index
-                    ? "border-cyan-400 bg-white/70 shadow-lg"
-                    : "border-sky-100 bg-white/60 hover:border-cyan-300"
+                    ? "border-[#005dad] bg-white/70 shadow-lg"
+                    : "border-sky-100 bg-white/60 hover:border-[#005dad]/30"
                 } p-5 backdrop-blur-md`}
               >
                 <button
@@ -123,7 +109,7 @@ function FAQs() {
                   </h3>
 
                   <ChevronDown
-                    className={`w-6 h-6 text-cyan-600 transition-transform duration-300 ${
+                    className={`w-6 h-6 text-[#005dad] transition-transform duration-300 ${
                       activeIndex === index ? "rotate-180" : ""
                     }`}
                   />
@@ -149,8 +135,8 @@ function FAQs() {
           </div>
 
           {/* CTA Section */}
-          <section className="rounded-[2rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 shadow-lg text-center">
-            <h2 className="text-3xl font-semibold text-cyan-800 mb-6">
+          <section className="border border-sky-100 bg-white/60 backdrop-blur-md p-10 shadow-lg text-center">
+            <h2 className="text-3xl font-semibold text-[#005dad] mb-6">
               Still Have Questions?
             </h2>
 
@@ -162,14 +148,14 @@ function FAQs() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-cyan-500 px-8 py-4 text-sm font-semibold text-white hover:bg-cyan-600 transition hover:scale-105"
+                className="inline-flex items-center justify-center bg-[#005dad] px-8 py-4 text-sm font-semibold text-white hover:bg-[#004c8c] transition hover:scale-105"
               >
                 Contact Our Team
               </Link>
 
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center rounded-2xl border border-sky-200 bg-white/70 px-8 py-4 text-sm font-semibold text-slate-900 hover:border-cyan-300 hover:scale-105 transition"
+                className="inline-flex items-center justify-center border border-sky-200 bg-white/70 px-8 py-4 text-sm font-semibold text-slate-900 hover:border-[#005dad]/30 hover:scale-105 transition"
               >
                 Schedule a Discussion
               </Link>

@@ -11,6 +11,8 @@ import {
   CheckCircle2
 } from "lucide-react";
 import pageBg from "../assets/page-bg.png";
+import PageBanner from "../components/PageBanner";
+import LeadershipTeam from "../components/LeadershipTeam";
 
 function Industries() {
   const industries = [
@@ -70,32 +72,17 @@ function Industries() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] text-slate-900">
+    <div className="min-h-screen bg-white text-slate-900">
       
       {/* Banner Section */}
-      <div className="relative h-[200px] md:h-[350px] overflow-hidden group shadow-2xl">
-        <img
-          src={pageBg}
-          alt="Industries Header"
-          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#cfefff]/20 to-[#cfefff]"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center space-y-4">
-            <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full" />
-            <h2 className="text-slate-900/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
-              Industries
-            </h2>
-          </div>
-        </div>
-      </div>
+      <PageBanner title="Industries" alt="Industries Header" />
 
       <div className="px-6 py-20 lg:px-16">
         <div className="max-w-7xl mx-auto space-y-16">
 
           {/* Header */}
           <header className="space-y-6 text-center">
-            <p className="text-cyan-700 uppercase tracking-[0.35em] text-sm font-semibold">
+            <p className="text-[#005dad] uppercase tracking-[0.35em] text-sm font-semibold">
               Industries We Serve
             </p>
             <h1 className="text-4xl font-extrabold sm:text-4xl text-slate-900">
@@ -111,9 +98,9 @@ function Industries() {
             {industries.map((industry) => (
               <div
                 key={industry.title}
-                className="group rounded-[2rem] border border-sky-100 bg-white/60 backdrop-blur-md p-8 shadow-lg transition-all duration-300 hover:border-cyan-300 hover:scale-105 flex flex-col items-center text-center"
+                className="group border border-sky-100 bg-white/60 backdrop-blur-md p-8 shadow-lg transition-all duration-300 hover:border-[#005dad]/30 hover:scale-105 flex flex-col items-center text-center"
               >
-                <div className="w-20 h-20 rounded-3xl bg-cyan-100 flex items-center justify-center text-cyan-700 mb-6 group-hover:scale-110 group-hover:bg-cyan-200 transition-all duration-500">
+                <div className="w-20 h-20 bg-blue-50 flex items-center justify-center text-[#005dad] mb-6 group-hover:scale-110 group-hover:bg-blue-100 transition-all duration-500">
                   {industry.icon}
                 </div>
 
@@ -128,10 +115,13 @@ function Industries() {
             ))}
           </div>
 
+          {/* Team Section Component Call */}
+          <LeadershipTeam />
+
           {/* Advantages Section */}
-          <section className="rounded-[2.5rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 lg:p-16 shadow-lg relative overflow-hidden">
+          <section className="border border-sky-100 bg-white/60 backdrop-blur-md p-10 lg:p-16 shadow-lg relative overflow-hidden">
             
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-300/10 blur-[100px] rounded-full" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#005dad]/5 blur-[100px] rounded-full" />
             
             <div className="text-center mb-16 space-y-4">
               <h2 className="text-3xl md:text-5xl font-black text-slate-900">
@@ -146,9 +136,9 @@ function Industries() {
               {advantages.map((advantage) => (
                 <div
                   key={advantage}
-                  className="group flex items-start gap-4 rounded-2xl border border-sky-100 bg-white/70 p-6 transition-all duration-300 hover:border-cyan-300 hover:bg-white"
+                  className="group flex items-start gap-4 border border-sky-100 bg-white/70 p-6 transition-all duration-300 hover:border-[#005dad]/30 hover:bg-white"
                 >
-                  <div className="shrink-0 w-10 h-10 rounded-xl bg-cyan-100 flex items-center justify-center text-cyan-700 group-hover:scale-110 transition-transform">
+                  <div className="shrink-0 w-10 h-10 bg-blue-50 flex items-center justify-center text-[#005dad] group-hover:scale-110 transition-transform">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
 

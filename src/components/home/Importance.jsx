@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Zap, ShieldCheck, Layers } from "lucide-react";
 
 const Importance = () => (
-  <section className="relative z-10 px-6 py-14 lg:px-20 overflow-hidden bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff]">
+  <section className="relative z-10 px-6 py-14 lg:px-20 overflow-hidden bg-white font-sans">
     <div className="max-w-5xl mx-auto text-center space-y-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -11,19 +11,19 @@ const Importance = () => (
         className="space-y-6"
       >
         <h2 className="text-4xl md:text-5xl font-black text-slate-900">
-          Why Solid-State Research Matters
+          The Science Inside Every Form Matters.
         </h2>
 
-        <div className="h-1 w-20 bg-cyan-600 mx-auto rounded-full" />
+        <div className="h-1 w-20 bg-[#005dad] mx-auto" />
 
-        <p className="text-xl text-slate-700 leading-relaxed max-w-4xl mx-auto">
-          The selection of the right solid form is one of the most critical
-          decisions in drug development. It directly impacts the{" "}
-          <strong>bioavailability, stability, manufacturability</strong>, and{" "}
-          <strong>intellectual property</strong> of a pharmaceutical product.
-          Failure to identify the optimal polymorph or salt early on can lead to
-          catastrophic late-stage failures or regulatory hurdles.
-        </p>
+        <div className="space-y-6 text-base md:text-lg text-slate-700 leading-relaxed max-w-5xl mx-auto text-center font-medium">
+          <p>
+            Solid-state properties—polymorphism, salt form, crystallinity, particle morphology—determine whether a drug candidate succeeds or fails long before it reaches the clinic. At Unit Cell Labs, we apply rigorous experimental science and deep domain expertise to characterize, optimize, and de-risk the solid form of your API from early discovery through clinical readiness.
+          </p>
+          <p>
+            We are a specialized contract research organization (CRO) focused exclusively on solid-state pharmaceutical sciences. Whether you are selecting the right polymorph, designing a scalable crystallization process, or navigating a regulatory submission, we are your dedicated scientific partner.
+          </p>
+        </div>
       </motion.div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
@@ -46,11 +46,11 @@ const Importance = () => (
         ].map((item, i) => (
           <div
             key={i}
-            className={`p-5 md:p-8 rounded-3xl bg-white/60 border border-cyan-100 hover:bg-white/80 transition-all text-center shadow-lg ${
+            className={`p-5 md:p-8 bg-white/60 border border-sky-100 hover:border-[#005dad]/30 hover:bg-white/80 transition-all text-center shadow-lg ${
               i === 2 ? "col-span-2 md:col-span-1" : ""
             }`}
           >
-            <div className="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center text-cyan-700 mb-6 mx-auto">
+            <div className="w-12 h-12 bg-blue-50 flex items-center justify-center text-[#005dad] mb-6 mx-auto">
               {item.icon}
             </div>
 

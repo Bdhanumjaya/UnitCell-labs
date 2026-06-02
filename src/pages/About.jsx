@@ -1,220 +1,128 @@
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 import pageBg from "../assets/page-bg.png";
-import team1 from "../assets/team-1.png";
-import team2 from "../assets/team-2.png";
-import team3 from "../assets/team-3.png";
+import PageBanner from "../components/PageBanner";
+import LeadershipTeam from "../components/LeadershipTeam";
+import { Award, Eye, Rocket, CheckCircle } from "lucide-react";
 
 function About() {
-  const team = [
-    {
-      name: "Dr. Arunesh",
-      role: "Scientific Director",
-      bio: "Over 20 years of expertise in crystal engineering and solid-state pharmaceutical development.",
-      image: team1
-    },
-    {
-      name: "Dr. Saranya",
-      role: "Principal Scientist",
-      bio: "Specializes in high-throughput screening and advanced polymorphic characterization techniques.",
-      image: team2
-    },
-    {
-      name: "Mr. Ramesh",
-      role: "Laboratory Operations Manager",
-      bio: "Ensures operational excellence and scientific rigor across all laboratory processes.",
-      image: team3
+  useEffect(() => {
+    document.title = "About Unit Cell Labs — Expert Solid-State CRO Based in India";
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = "description";
+      document.head.appendChild(metaDesc);
     }
+    metaDesc.content = "Learn how Unit Cell Labs brings world-class solid-state pharmaceutical expertise to global drug development programs — combining rigorous science with cost-effective, India-based operations.";
+  }, []);
+
+  const approach = [
+    {
+      title: "Science-first",
+      desc: "Every recommendation is grounded in rigorous experimental data and deep mechanistic understanding.",
+    },
+    {
+      title: "Collaborative",
+      desc: "We work as a seamless extension of your team, not a black-box vendor.",
+    },
+    {
+      title: "Transparent",
+      desc: "Regular updates, clear interim reports, and direct access to the scientists leading your project.",
+    },
+    {
+      title: "Pragmatic",
+      desc: "We focus on answering the right questions, not generating data for its own sake.",
+    },
+    {
+      title: "Regulatory-aware",
+      desc: "Our experimental designs and reports are structured from day one to support your IND, IMPD, or NDA submissions.",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#eaf8ff] via-[#dff4ff] to-[#cfefff] text-slate-900">
+    <div className="min-h-screen bg-white text-slate-900">
       
       {/* Full Width Banner Section */}
-      <div className="relative h-[200px] md:h-[350px] overflow-hidden group shadow-2xl">
-        <img
-          src={pageBg}
-          alt="About Header"
-          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#cfefff]/20 to-[#cfefff]"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center space-y-4">
-            <div className="h-1 w-20 bg-cyan-500 mx-auto rounded-full" />
-            <h2 className="text-slate-900/20 text-6xl md:text-8xl font-black uppercase tracking-widest select-none">
-              About Us
-            </h2>
-          </div>
-        </div>
-      </div>
+      <PageBanner title="About Us" alt="About Header" />
 
       <div className="px-6 py-20 lg:px-16">
         <div className="max-w-6xl mx-auto space-y-24">
           
-          {/* Header */}
+          {/* Header & Positioning statement */}
           <header className="space-y-8 text-center">
-            <p className="text-cyan-700 uppercase tracking-[0.35em] text-sm font-semibold">
-              About UNIT CELL Labs
+            <p className="text-[#005dad] uppercase tracking-[0.35em] text-xs sm:text-sm font-bold">
+              About Unit Cell Labs
             </p>
-            <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-4xl mx-auto max-w-4xl text-slate-900">
-              Specialized pharmaceutical solid-state research for reliable drug development.
+            <h1 className="text-3xl font-black leading-tight sm:text-5xl text-slate-900 mx-auto max-w-4xl tracking-tight">
+              We Exist Because Solid-State Science Is Hard — and It Matters.
             </h1>
-            <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-slate-700 leading-8 text-lg">
-                UNIT CELL Labs is a specialized pharmaceutical solid-state research
-                company focused on delivering scientific solutions for drug
-                substance and drug product development. We support pharmaceutical,
-                biotech, specialty chemical, material science, agrochemical,
-                nutraceutical, and research organizations with comprehensive
-                solid-form screening, characterization, crystallization process
-                development, and preformulation studies.
+            <div className="max-w-4xl mx-auto space-y-6 text-left sm:text-center">
+              <p className="text-slate-800 leading-8 text-base sm:text-lg font-semibold">
+                Drug development is full of critical decisions. Few are more consequential — or more often underestimated — than solid form selection. A molecule's polymorphic form, crystallinity, particle size, and hygroscopicity directly determine its bioavailability, manufacturability, shelf life, and regulatory fate.
               </p>
-              <p className="text-slate-600 leading-8 text-lg">
-                Our mission is to help clients minimize development risks, improve
-                product performance, and build strong intellectual property
-                opportunities through deep understanding of solid-state chemistry.
+              <p className="text-slate-700 leading-8 text-base sm:text-lg font-medium">
+                Unit Cell Labs was founded to be the dedicated solid-state partner that small and mid-size pharma and biotech companies need — but rarely have in-house. We bring senior scientific expertise, purpose-built analytical capabilities, and a clear focus on what matters: helping your program advance with confidence.
               </p>
             </div>
+            <div className="h-1 w-20 bg-[#005dad] mx-auto mt-6" />
           </header>
 
-          {/* Core Strengths Section */}
-          <section className="rounded-[2.5rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 shadow-lg hover:border-cyan-300 transition-all">
-            <h2 className="text-3xl font-semibold text-cyan-800 text-center mb-12">
-              Our Core Strengths
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                "Expertise in pharmaceutical solid-state chemistry",
-                "Customized screening strategies for APIs",
-                "Support for pharmaceutical and material development programs",
-                "Data-driven scientific approach",
-                "Fast project execution with confidentiality",
-                "Advanced analytical characterization support",
-              ].map((strength) => (
-                <div
-                  key={strength}
-                  className="p-6 rounded-2xl border border-sky-100 bg-white/70 hover:border-cyan-300 hover:scale-[1.02] transition-all flex items-center justify-center text-center shadow-sm"
-                >
-                  <p className="text-slate-700 font-medium">{strength}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* Our Approach Section */}
-          <section className="rounded-[2.5rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 shadow-lg hover:border-cyan-300 transition-all">
-            <h2 className="text-3xl font-semibold text-cyan-800 mb-6">
+          <section className="border border-sky-100 bg-white/60 backdrop-blur-md p-8 md:p-12 shadow-lg hover:border-[#005dad]/30 transition-all duration-300">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 text-center mb-8">
               Our Approach
             </h2>
-            <p className="text-slate-700 leading-8 mb-6 text-lg">
-              We combine scientific expertise, regulatory understanding, and practical development strategies to provide high-quality and reliable data for diverse industrial research and development programs.
-            </p>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {[
-                "Scientific excellence in solid-state chemistry",
-                "Regulatory-oriented development strategies",
-                "Confidential collaboration with project teams",
-                "Robust data for formulation and lifecycle planning",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-3xl border border-sky-100 bg-white/70 p-6 hover:border-cyan-300 hover:scale-105 transition-all shadow-sm"
-                >
-                  <p className="text-slate-700 font-medium">{item}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Team Section */}
-          <section className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">
-                Our Leadership Team
-              </h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">
-                Expertise that drives scientific innovation and reliable results.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {team.map((member, i) => (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {approach.map((item, i) => (
                 <div
                   key={i}
-                  className="group relative rounded-[2.5rem] border border-sky-100 bg-white/60 backdrop-blur-md p-6 hover:border-cyan-300 transition-all shadow-lg"
+                  className="border border-sky-100 bg-white/70 p-6 hover:border-[#005dad]/30 hover:scale-105 transition-all shadow-sm flex flex-col gap-4"
                 >
-                  <div className="relative mb-6 h-64 overflow-hidden rounded-[2rem]">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
-                    />
-                  </div>
-
-                  <div className="space-y-3">
-                    <h3 className="text-2xl font-bold text-slate-900">
-                      {member.name}
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#005dad] shrink-0" />
+                    <h3 className="text-lg font-bold text-slate-900">
+                      {item.title}
                     </h3>
-                    <p className="text-cyan-700 font-medium text-sm uppercase tracking-wider">
-                      {member.role}
-                    </p>
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      {member.bio}
-                    </p>
                   </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Workflow Section */}
-          <section className="rounded-[2.5rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 lg:p-16 shadow-lg hover:border-cyan-300 transition-all">
-            <h2 className="text-3xl font-semibold text-cyan-800 mb-16 text-center">
-              Scientific Workflow
-            </h2>
-
-            <div className="space-y-12">
-              {[
-                { step: "01", title: "Scientific Discussion", detail: "Understanding molecule information, project goals, and development challenges." },
-                { step: "02", title: "Proposal and Planning", detail: "Defining scope, timelines, deliverables, and experimental strategy." },
-                { step: "03", title: "Experimental Execution", detail: "Conducting systematic screening and characterization studies." },
-                { step: "04", title: "Data Analysis", detail: "Scientific interpretation of results and comparative assessment." },
-                { step: "05", title: "Reporting and Recommendations", detail: "Detailed reporting with conclusions and development recommendations." },
-              ].map((item) => (
-                <div
-                  key={item.step}
-                  className="rounded-2xl border border-sky-100 bg-white/70 p-6 hover:border-cyan-300 transition-all shadow-sm"
-                >
-                  <h3 className="text-xl font-semibold text-slate-900">
-                    {item.step}. {item.title}
-                  </h3>
-                  <p className="text-slate-600 mt-2 leading-7">
-                    {item.detail}
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-semibold">
+                    {item.desc}
                   </p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* Vision & Mission Section */}
-          <section className="rounded-[2.5rem] border border-sky-100 bg-white/60 backdrop-blur-md p-10 lg:p-16 shadow-lg hover:border-cyan-300 transition-all">
-            <h2 className="text-3xl font-semibold text-cyan-800 mb-8 text-center">
-              Vision & Mission
-            </h2>
-            <div className="grid gap-8 lg:grid-cols-2">
-              <div className="rounded-3xl border border-sky-100 bg-white/70 p-8 hover:border-cyan-300 transition-all shadow-sm">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Vision</h3>
-                <p className="text-slate-700 leading-8 text-lg">
-                  To become a trusted scientific partner in pharmaceutical solid-state research and development by delivering innovative, reliable, and impactful solutions.
+          {/* Why India - Why Now Section */}
+          <section className="border border-[#005dad]/20 bg-gradient-to-r from-blue-600/5 to-[#005dad]/5 p-8 md:p-12 shadow-lg backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-[#005dad]/5 blur-[80px] rounded-full pointer-events-none" />
+            
+            <div className="grid gap-8 lg:grid-cols-[0.8fr_1fr] items-center">
+              
+              <div className="space-y-4">
+                <p className="text-[#00427b] uppercase tracking-widest text-xs font-bold">
+                  Geographical Advantage
+                </p>
+                <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+                  Why India — Why Now
+                </h2>
+                <div className="h-1 w-16 bg-[#005dad]" />
+              </div>
+
+              <div className="space-y-6 text-slate-800 text-sm sm:text-base leading-relaxed font-medium">
+                <p>
+                  India has one of the world's deepest talent pools in pharmaceutical sciences, with a thriving ecosystem of generic and innovator drug development. Unit Cell Labs was established to channel that scientific capability into specialized solid-state CRO services — offering global pharma and biotech access to world-class science with the responsiveness and cost-effectiveness that India uniquely enables.
+                </p>
+                <p>
+                  We serve clients across India, the US, Europe, and beyond — delivering internationally recognized scientific standards with local agility.
                 </p>
               </div>
 
-              <div className="rounded-3xl border border-sky-100 bg-white/70 p-8 hover:border-cyan-300 transition-all shadow-sm">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Mission</h3>
-                <p className="text-slate-700 leading-8 text-lg">
-                  To support industrial innovation and research through high-quality solid-state science, scientific integrity, and customer-focused collaboration.
-                </p>
-              </div>
             </div>
           </section>
+
+          {/* Leadership Team Component */}
+          <LeadershipTeam />
 
         </div>
       </div>
