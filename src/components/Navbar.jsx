@@ -87,18 +87,74 @@ function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 lg:px-10">
-        <div className="md:w-64 w-auto flex items-center shrink-0">
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="Unit Cell Labs"
-              className="h-14 w-auto "
-            />
-          </Link>
-        </div>
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5 lg:px-10">
+       <div className="md:w-[380px] w-auto flex items-center shrink-0">
+  <Link to="/" className="flex items-center gap-4">
 
-        <nav className="hidden items-center gap-5 text-xs font-medium uppercase tracking-[0.14em] md:flex mx-auto">
+    {/* UC Icon */}
+    <img
+      src={logo}
+      alt="Unit Cell Labs"
+      className="h-16 lg:h-16 w-auto object-contain"
+    />
+
+    {/* Company Name */}
+  {/* Company Name */}
+<div className="hidden sm:flex flex-col justify-center leading-none">
+
+  <h1
+    className="
+      text-[#0F1F4A]
+      font-extrabold
+      text-[22px]
+      lg:text-[30px]
+      tracking-[0.22em]
+      uppercase
+      leading-none
+    "
+  >
+    UNIT CELL
+  </h1>
+
+ <div className="flex items-center justify-center gap-3 mt-0.5">
+    <div className="h-[2px] w-10 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full" />
+
+    <span
+      className="
+        text-[#1D6F86]
+        font-bold
+        text-[11px]
+        lg:text-[14px]
+        tracking-[0.65em]
+        uppercase
+      "
+    >
+        LABS
+    </span>
+
+    <div className="h-[2px] w-10 bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full" />
+  </div>
+
+  <span
+    className="
+      mt-1.5
+      text-[8px]
+      lg:text-[9px]
+      font-medium
+      tracking-[0.22em]
+      uppercase
+      text-slate-600
+    "
+  >
+    Where Science Meets Solid Form
+  </span>
+
+</div>
+
+  </Link>
+</div>
+
+        <nav className="hidden items-center gap-5 text-xs font-medium uppercase tracking-[0.14em] md:flex ml-auto">
           <NavLink
             to="/"
             className={({ isActive }) =>
